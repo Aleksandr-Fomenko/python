@@ -1,24 +1,29 @@
-<h3>217. Contains Duplicate</h3>
+<h3>28. Find the Index of the First Occurrence in a String</h3>
 
-Given an integer array <code>nums</code>, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
+    
 Example 1:
 
-Input: nums = [1,2,3,1]
-Output: true
+Input: haystack = "sadbutsad", needle = "sad"
+
+Output: 0
+
+Explanation: "sad" occurs at index 0 and 6.
+
+The first occurrence is at index 0, so we return 0.
 
 Example 2:
 
-Input: nums = [1,2,3,4]
-Output: false
+Input: haystack = "leetcode", needle = "leeto"
 
-Example 3:
+Output: -1
 
-Input: nums = [1,1,1,3,3,4,3,2,4,2]
-Output: true
+Explanation: "leeto" did not occur in "leetcode", so we return -1.
  
 
 Constraints:
 
-1 <= nums.length <= 105
--109 <= nums[i] <= 109
+1 <= haystack.length, needle.length <= 104
+
+haystack and needle consist of only lowercase English characters.

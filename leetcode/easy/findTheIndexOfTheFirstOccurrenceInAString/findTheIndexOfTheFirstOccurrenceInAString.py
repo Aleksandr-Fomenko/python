@@ -1,11 +1,14 @@
-from typing import List
+import re
 
-
-def containsDuplicate(nums: List[int]) -> bool:
-    return False if len(nums) == len(list(dict.fromkeys(nums))) else True
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        infoList = [ i.start() for i in re.finditer(needle, haystack)]
+        if len(infoList) == 0:
+            return -1
+        else:
+            return infoList[0]
 
 
 if __name__ == '__main__':
-    print(containsDuplicate([1, 2, 3, 1]))
-    print(containsDuplicate([1, 2, 3, 4]))
-    print(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
+    print(Solution().strStr(haystack = "sadbutsad", needle = "sad"))
+    print(Solution().strStr(haystack = "leetcode", needle = "leeto"))
